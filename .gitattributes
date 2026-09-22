@@ -1,0 +1,7 @@
+* text=auto
+
+# Preserve exact bytes for the canonical submission and its integrity files
+submission/FINAL_SUBMISSION.csv binary
+submission/hash.txt binary
+HASH_MANIFEST.sha256 binary
+RELEASE_MANIFEST.csv binary

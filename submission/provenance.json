@@ -1,0 +1,47 @@
+{
+  "submission_option": "OPTION_1_CANONICAL",
+  "filename": "FINAL_SUBMISSION.csv",
+  "path": "FINAL_RELEASE/submissions/OPTION_1_CANONICAL/FINAL_SUBMISSION.csv",
+  "sha256": "55f346a2d7a94e10f83cf5e393013a113d74210ab128ce95dd89501277c354e4",
+  "public_score": 1073.18868,
+  "row_count": 1705,
+  "column_count": 2,
+  "column_names": ["id", "total_sales"],
+  "status": "FROZEN",
+  "authoritative_script": "ARCHIVE/FINAL_ARCHIVE_ORIG/temporary_files/_exec_notebook.py",
+  "verification_script": "CODE/final/run_notebook_repro.py",
+  "model_configuration": {
+    "type": "Optimized Blend",
+    "components": {
+      "A_direct": {"model": "CatBoostRegressor", "weight": 0.3150392234808109},
+      "B_store_norm": {"model": "CatBoostRegressor", "weight": 0.5635523048051151},
+      "C_two_stage": {"model": "CatBoostRegressor", "weight": 0.08326192124539074},
+      "D_ridge": {"model": "Ridge", "weight": 0.038146550468683295},
+      "E_catboost_ridge": {"model": "CatBoost+Ridge", "weight": 0.0}
+    }
+  },
+  "catboost_params": {
+    "iterations": 600,
+    "learning_rate": 0.05,
+    "depth": 6,
+    "l2_leaf_reg": 3.0,
+    "loss_function": "RMSE",
+    "eval_metric": "RMSE",
+    "random_seed": 42,
+    "early_stopping_rounds": 100
+  },
+  "features": 19,
+  "categorical_features": [
+    "product_code",
+    "store_code",
+    "product_category_clean",
+    "store_format",
+    "store_location_tier",
+    "fat_content_clean"
+  ],
+  "training_data": "DATA/competition_data/train.csv",
+  "test_data": "DATA/competition_data/test.csv",
+  "folds": "KFold(n_splits=5, shuffle=True, random_state=42)",
+  "reproducibility": "BYTE-IDENTICAL",
+  "generated_at": "2026-09-10T10:01:30+01:00"
+}

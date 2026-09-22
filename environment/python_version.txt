@@ -1,0 +1,2 @@
+Python >= 3.8 (exact version not pinned in source)
+Recommended: Python 3.9 – 3.12
